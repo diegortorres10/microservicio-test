@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "411dff55-3709-45f9-9650-09454d9f1da8",
+		"name": "pichincha-microservicio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Personas GET all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Persona",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clientes GET all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clientes POST create",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"contraseña\": \"1\",\r\n    \"estado\": true,\r\n    \"persona\": {\r\n        \"nombre\": \"test test\",\r\n        \"genero\": \"masculino\",\r\n        \"edad\": 30,\r\n        \"identificacion\": \"1234567890\",\r\n        \"telefono\": \"02231313\",\r\n        \"direccion\": \"Direccion es requerida\"\r\n    },\r\n    \"cuentas\": [{\r\n        \"numerocuenta\": \"123\",\r\n        \"tipocuenta\": \"Ahorros\",\r\n        \"saldoinicial\": 0.0,\r\n        \"estado\": true\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Cliente"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
